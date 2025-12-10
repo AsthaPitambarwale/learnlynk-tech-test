@@ -1,5 +1,4 @@
 # LearnLynk – Technical Test (Supabase + Next.js)
-
 This repository contains the full implementation of the LearnLynk technical test:
 
 ✔ Supabase SQL Schema  
@@ -11,7 +10,6 @@ This repository contains the full implementation of the LearnLynk technical test
 ✔ Submission Notes + Assumptions  
 
 ## 1. Project Setup
-
 Install dependencies:
 
     npm install
@@ -22,14 +20,12 @@ Create `.env.local`:
     NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
 
 ## 2. Supabase Setup
-
 Run migrations manually in Supabase SQL Editor:
 
 - `supabase/migrations/001_schema.sql`
 - `supabase/policies/leads_policies.sql`
 
 ## 3. Edge Function Deployment
-
 Set environment secrets in:
 Supabase Dashboard → Edge Functions → Secrets
 
@@ -41,14 +37,12 @@ Deploy:
     supabase functions deploy create-task
 
 ## 4. Running the Project
-
     npm run dev
 
 Open:  
 http://localhost:3000/dashboard/today
 
 ## 5. Assumptions
-
 - JWT token contains `role` and `sub` user id.
 - Each application belongs to a lead.
 - Tasks reference applications through `related_id`.
@@ -56,7 +50,6 @@ http://localhost:3000/dashboard/today
 - Task must have `due_at > created_at`.
 
 ## 6. Folder Explanation
-
 - `supabase/` → SQL + RLS + Edge Functions  
 - `app/dashboard/today/` → Task UI Page  
 - `src/lib/supabase.ts` → Supabase client  
@@ -64,7 +57,6 @@ http://localhost:3000/dashboard/today
 - `.gitignore` → Prevent secrets in Git  
 
 ## 7. Final Notes
-
 This project follows:
 - Clean architecture
 - Consistent naming
